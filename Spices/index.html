@@ -787,12 +787,14 @@
       align-items: center;
       justify-content: space-between;
       gap: 8px;
+      flex-wrap: wrap;
     }
     .weighttoggle {
       display: flex;
       border: 1.5px solid var(--line);
       border-radius: 999px;
       padding: 2px;
+      flex-shrink: 0;
     }
     .weighttoggle button {
       padding: 5px 11px;
@@ -801,6 +803,7 @@
       border-radius: 999px;
       color: var(--wood);
       background: transparent;
+      min-height: 30px;
     }
     .weighttoggle button.active {
       background: var(--espresso);
@@ -812,45 +815,49 @@
       gap: 2px;
       border: 1.5px solid var(--line);
       border-radius: 999px;
-      padding: 0 4px;
+      padding: 2px 4px;
       background: var(--paper);
+      flex-shrink: 0;
     }
     .qtystepper button {
-      width: 28px;
-      height: 28px;
+      width: 32px;
+      height: 32px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--espresso);
       border-radius: 50%;
       transition: background 0.1s;
+      flex-shrink: 0;
     }
     .qtystepper button:hover {
       background: var(--creamsoft);
     }
     .qtystepper button .icon {
-      width: 14px;
-      height: 14px;
+      width: 16px;
+      height: 16px;
       stroke-width: 2.2;
     }
     .qtystepper .qtyval {
-      min-width: 22px;
+      min-width: 24px;
       text-align: center;
-      font-size: .85rem;
+      font-size: .88rem;
       font-weight: 600;
       color: var(--espresso);
+      padding: 0 2px;
     }
     .productprice {
       font-family: var(--display);
       font-weight: 600;
       font-size: 1.15rem;
       color: var(--paprikadark);
+      flex-shrink: 0;
     }
     .addbtn {
       background: var(--espresso);
       color: var(--creamsoft);
       border-radius: 999px;
-      padding: 11px;
+      padding: 11px 16px;
       font-weight: 600;
       font-size: .88rem;
       display: flex;
@@ -858,6 +865,7 @@
       justify-content: center;
       gap: 7px;
       transition: background .15s ease, transform .12s ease;
+      min-height: 44px;
     }
     .addbtn:hover {
       background: var(--espresso2);
@@ -1450,8 +1458,8 @@
         gap: 12px;
       }
       .productbody {
-        padding: 12px;
-        gap: 9px;
+        padding: 12px 12px 14px;
+        gap: 10px;
       }
       .producttitle {
         font-size: .92rem;
@@ -1459,27 +1467,86 @@
       .productblurb {
         display: none;
       }
+      .productcontrols {
+        gap: 6px;
+      }
+      .weighttoggle button {
+        padding: 4px 10px;
+        font-size: .7rem;
+        min-height: 28px;
+      }
+      .qtystepper {
+        padding: 2px 3px;
+        gap: 1px;
+      }
+      .qtystepper button {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        min-height: 30px;
+      }
+      .qtystepper button .icon {
+        width: 15px;
+        height: 15px;
+      }
+      .qtystepper .qtyval {
+        min-width: 22px;
+        font-size: .85rem;
+      }
+      .productprice {
+        font-size: 1rem;
+      }
+      .addbtn {
+        padding: 10px 12px;
+        font-size: .8rem;
+        min-height: 40px;
+      }
+      .addbtn .icon {
+        width: 14px;
+        height: 14px;
+      }
       .categorygrid {
         grid-template-columns: 1fr 1fr;
       }
       .howgrid {
         grid-template-columns: 1fr;
       }
-      .qtystepper button {
-        width: 32px;
-        height: 32px;
+    }
+    @media (max-width: 380px) {
+      .shopgrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
       }
-      .qtystepper button .icon {
-        width: 16px;
-        height: 16px;
-      }
-      .qtystepper .qtyval {
-        min-width: 24px;
-        font-size: .9rem;
+      .productbody {
+        padding: 10px 10px 12px;
+        gap: 8px;
       }
       .weighttoggle button {
-        padding: 6px 12px;
-        font-size: .78rem;
+        padding: 3px 8px;
+        font-size: .65rem;
+        min-height: 24px;
+      }
+      .qtystepper button {
+        width: 26px;
+        height: 26px;
+        min-width: 26px;
+        min-height: 26px;
+      }
+      .qtystepper button .icon {
+        width: 13px;
+        height: 13px;
+      }
+      .qtystepper .qtyval {
+        min-width: 18px;
+        font-size: .8rem;
+      }
+      .addbtn {
+        padding: 8px 10px;
+        font-size: .75rem;
+        min-height: 36px;
+      }
+      .productprice {
+        font-size: .9rem;
       }
     }
   </style>
@@ -1697,8 +1764,7 @@
             <textarea id="cfMessage" name="message" rows="4" placeholder="Tell us what you are after..." required></textarea>
           </div>
           <button type="submit" class="btn btnprimary btnblock">
-            <svg class="icon"><use href="#iwhatsapp"/></svg> Continue on WhatsApp
-          </button>
+            <svg class="icon"><use href="#iwhatsapp"/></svg> Continue on WhatsApp          </button>
           <p class="formnote">We will open WhatsApp with your message pre-filled — just hit send.</p>
           <div class="formsuccess" id="formSuccess"><svg class="icon"><use href="#icheck"/></svg> Ready — check the new WhatsApp tab to send it.</div>
         </form>
