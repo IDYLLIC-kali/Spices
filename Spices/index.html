@@ -255,16 +255,22 @@
       flex-shrink: 0;
     }
     .logomark {
-      width: 44px;
-      height: 44px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
       flex-shrink: 0;
-      color: var(--espresso);
       display: flex;
       align-items: center;
       justify-content: center;
       background: var(--creamsoft);
       border: 2px solid var(--espresso);
+      overflow: hidden;
+    }
+    .logomark img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
     }
     .logomark .icon {
       width: 28px;
@@ -455,7 +461,6 @@
       color: var(--cream);
     }
     .mobilenavtop .logomark {
-      color: var(--cream);
       border-color: var(--cream);
       background: transparent;
     }
@@ -959,11 +964,20 @@
       position: relative;
       border-radius: var(--radiusm);
       overflow: hidden;
+      background: var(--creamsoft);
+      border: 2px solid var(--line);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 300px;
     }
     .aboutart img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      max-width: 400px;
+      height: auto;
+      object-fit: contain;
+      border-radius: var(--radiusm);
     }
     .aboutcopy {
       display: flex;
@@ -1109,7 +1123,6 @@
       color: var(--cream);
     }
     .footerbrand .logomark {
-      color: var(--cream);
       border-color: var(--cream);
       background: transparent;
     }
@@ -1608,7 +1621,7 @@
     <div class="container headerrow">
       <a href="#top" class="logo">
         <span class="logomark">
-          <svg class="icon"><use href="#ibarrel"/></svg>
+          <img src="logo-icon.jpeg" alt="Spice 'n' Barrels logo" onerror="this.style.display='none';this.parentElement.innerHTML='<svg class=icon><use href=#ibarrel/></svg>'">
         </span>
         <span class="logotext">
           <span class="name">
@@ -1650,7 +1663,7 @@
     <div class="mobilenavtop">
       <a href="#top" class="logo">
         <span class="logomark">
-          <svg class="icon"><use href="#ibarrel"/></svg>
+          <img src="logo-icon.jpeg" alt="Spice 'n' Barrels logo" onerror="this.style.display='none';this.parentElement.innerHTML='<svg class=icon><use href=#ibarrel/></svg>'">
         </span>
         <span class="logotext">
           <span class="name">
@@ -1754,7 +1767,7 @@
     <section class="about container" id="about">
       <div class="aboutgrid">
         <div class="aboutart reveal">
-          <img src="spices2.jpeg" alt="Spices display" onerror="this.style.display='none'">
+          <img src="logo-icon.jpeg" alt="Spice 'n' Barrels logo" onerror="this.style.display='none'">
         </div>
         <div class="aboutcopy reveal">
           <span class="sectionkicker">About us</span>
@@ -1813,7 +1826,7 @@
       <div class="footerbrand">
         <a href="#top" class="logo">
           <span class="logomark">
-            <svg class="icon"><use href="#ibarrel"/></svg>
+            <img src="logo-icon.jpeg" alt="Spice 'n' Barrels logo" onerror="this.style.display='none';this.parentElement.innerHTML='<svg class=icon><use href=#ibarrel/></svg>'">
           </span>
           <span class="logotext">
             <span class="name">
