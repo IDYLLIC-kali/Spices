@@ -251,56 +251,33 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 12px;
-      flex-shrink: 0;
+      gap: 11px;
     }
     .logomark {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--creamsoft);
-      border: 2px solid var(--espresso);
-      overflow: hidden;
-    }
-    .logomark img {
-      width: 100%;
-      height: 100%;
       object-fit: cover;
-      border-radius: 50%;
-    }
-    .logomark .icon {
-      width: 28px;
-      height: 28px;
+      flex-shrink: 0;
     }
     .logotext {
       display: flex;
       flex-direction: column;
-      line-height: 1.05;
+      line-height: 1.15;
     }
     .logotext .name {
       font-family: var(--display);
-      font-weight: 700;
-      font-size: 1.1rem;
+      font-weight: 600;
+      font-size: 1.18rem;
       color: var(--espresso);
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-      line-height: 1.1;
-    }
-    .logotext .name .line2 {
-      display: block;
-      margin-top: -2px;
+      letter-spacing: -.01em;
     }
     .logotext .tag {
-      font-size: .55rem;
+      font-size: .66rem;
       font-weight: 600;
-      letter-spacing: 0.04em;
+      letter-spacing: .08em;
       color: var(--wood);
       text-transform: uppercase;
-      margin-top: 2px;
     }
 
     .mainnav {
@@ -461,8 +438,7 @@
       color: var(--cream);
     }
     .mobilenavtop .logomark {
-      border-color: var(--cream);
-      background: transparent;
+      color: var(--cream);
     }
     .mobilenav a {
       font-family: var(--display);
@@ -964,20 +940,11 @@
       position: relative;
       border-radius: var(--radiusm);
       overflow: hidden;
-      background: var(--creamsoft);
-      border: 2px solid var(--line);
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 300px;
     }
     .aboutart img {
       width: 100%;
-      max-width: 400px;
-      height: auto;
-      object-fit: contain;
-      border-radius: var(--radiusm);
+      height: 100%;
+      object-fit: cover;
     }
     .aboutcopy {
       display: flex;
@@ -1123,8 +1090,7 @@
       color: var(--cream);
     }
     .footerbrand .logomark {
-      border-color: var(--cream);
-      background: transparent;
+      color: var(--cream);
     }
     .footerbrand p {
       font-size: .88rem;
@@ -1620,15 +1586,10 @@
   <header class="siteheader">
     <div class="container headerrow">
       <a href="#top" class="logo">
-        <span class="logomark">
-          <img src="logo-icon.jpeg" alt="Spice 'n' Barrels logo" onerror="this.style.display='none';this.parentElement.innerHTML='<svg class=icon><use href=#ibarrel/></svg>'">
-        </span>
+        <img class="logomark" src="icon.jpeg" alt="Spice 'n' Barrels icon" onerror="this.style.display='none'">
         <span class="logotext">
-          <span class="name">
-            SPICE'N
-            <span class="line2">BARRELS</span>
-          </span>
-          <span class="tag">PURE SPICES. RICH FLAVOURS.</span>
+          <span class="name">Spice 'n' Barrels</span>
+          <span class="tag">Pure spices, rich flavours</span>
         </span>
       </a>
 
@@ -1662,16 +1623,8 @@
   <nav class="mobilenav" id="mobileNav" aria-label="Mobile">
     <div class="mobilenavtop">
       <a href="#top" class="logo">
-        <span class="logomark">
-          <img src="logo-icon.jpeg" alt="Spice 'n' Barrels logo" onerror="this.style.display='none';this.parentElement.innerHTML='<svg class=icon><use href=#ibarrel/></svg>'">
-        </span>
-        <span class="logotext">
-          <span class="name">
-            SPICE'N
-            <span class="line2">BARRELS</span>
-          </span>
-          <span class="tag">PURE SPICES. RICH FLAVOURS.</span>
-        </span>
+        <img class="logomark" src="icon.jpeg" alt="Spice 'n' Barrels icon" onerror="this.style.display='none'">
+        <span class="logotext"><span class="name">Spice 'n' Barrels</span></span>
       </a>
       <button class="iconbtn closebtn" id="mobileClose" aria-label="Close menu"><svg class="icon"><use href="#iclose"/></svg></button>
     </div>
@@ -1767,7 +1720,7 @@
     <section class="about container" id="about">
       <div class="aboutgrid">
         <div class="aboutart reveal">
-          <img src="logo-icon.jpeg" alt="Spice 'n' Barrels logo" onerror="this.style.display='none'">
+          <img src="spices2.jpeg" alt="Spices display" onerror="this.style.display='none'">
         </div>
         <div class="aboutcopy reveal">
           <span class="sectionkicker">About us</span>
@@ -1825,16 +1778,8 @@
     <div class="container footertop">
       <div class="footerbrand">
         <a href="#top" class="logo">
-          <span class="logomark">
-            <img src="logo-icon.jpeg" alt="Spice 'n' Barrels logo" onerror="this.style.display='none';this.parentElement.innerHTML='<svg class=icon><use href=#ibarrel/></svg>'">
-          </span>
-          <span class="logotext">
-            <span class="name">
-              SPICE'N
-              <span class="line2">BARRELS</span>
-            </span>
-            <span class="tag">PURE SPICES. RICH FLAVOURS.</span>
-          </span>
+          <img class="logomark" src="icon.jpeg" alt="Spice 'n' Barrels icon" onerror="this.style.display='none'">
+          <span class="logotext"><span class="name">Spice 'n' Barrels</span><span class="tag">Pure spices, rich flavours</span></span>
         </a>
         <p>Small-batch spice blends, hand-blended and packed with care.</p>
         <div class="footersocial">
