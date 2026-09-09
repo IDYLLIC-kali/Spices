@@ -251,38 +251,41 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 11px;
+      gap: 12px;
     }
     .logomark {
-      width: 40px;
-      height: 40px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       flex-shrink: 0;
       color: var(--espresso);
       display: flex;
       align-items: center;
       justify-content: center;
+      background: var(--creamsoft);
+      border: 2px solid var(--espresso);
     }
     .logomark .icon {
-      width: 32px;
-      height: 32px;
+      width: 28px;
+      height: 28px;
     }
     .logotext {
       display: flex;
       flex-direction: column;
-      line-height: 1.15;
+      line-height: 1.1;
     }
     .logotext .name {
       font-family: var(--display);
-      font-weight: 600;
-      font-size: 1.18rem;
+      font-weight: 700;
+      font-size: 1.2rem;
       color: var(--espresso);
-      letter-spacing: -.01em;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
     }
     .logotext .tag {
-      font-size: .66rem;
+      font-size: .6rem;
       font-weight: 600;
-      letter-spacing: .08em;
+      letter-spacing: 0.06em;
       color: var(--wood);
       text-transform: uppercase;
     }
@@ -446,6 +449,7 @@
     }
     .mobilenavtop .logomark {
       color: var(--cream);
+      border-color: var(--cream);
     }
     .mobilenav a {
       font-family: var(--display);
@@ -1098,6 +1102,7 @@
     }
     .footerbrand .logomark {
       color: var(--cream);
+      border-color: var(--cream);
     }
     .footerbrand p {
       font-size: .88rem;
@@ -1597,8 +1602,8 @@
           <svg class="icon"><use href="#ibarrel"/></svg>
         </span>
         <span class="logotext">
-          <span class="name">Spice 'n' Barrels</span>
-          <span class="tag">Pure spices, rich flavours</span>
+          <span class="name">SPICE'N BARRELS</span>
+          <span class="tag">PURE SPICES. RICH FLAVOURS.</span>
         </span>
       </a>
 
@@ -1635,7 +1640,10 @@
         <span class="logomark">
           <svg class="icon"><use href="#ibarrel"/></svg>
         </span>
-        <span class="logotext"><span class="name">Spice 'n' Barrels</span></span>
+        <span class="logotext">
+          <span class="name">SPICE'N BARRELS</span>
+          <span class="tag">PURE SPICES. RICH FLAVOURS.</span>
+        </span>
       </a>
       <button class="iconbtn closebtn" id="mobileClose" aria-label="Close menu"><svg class="icon"><use href="#iclose"/></svg></button>
     </div>
@@ -1792,7 +1800,10 @@
           <span class="logomark">
             <svg class="icon"><use href="#ibarrel"/></svg>
           </span>
-          <span class="logotext"><span class="name">Spice 'n' Barrels</span><span class="tag">Pure spices, rich flavours</span></span>
+          <span class="logotext">
+            <span class="name">SPICE'N BARRELS</span>
+            <span class="tag">PURE SPICES. RICH FLAVOURS.</span>
+          </span>
         </a>
         <p>Small-batch spice blends, hand-blended and packed with care.</p>
         <div class="footersocial">
