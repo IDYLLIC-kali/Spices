@@ -257,8 +257,15 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      object-fit: cover;
       flex-shrink: 0;
+      color: var(--espresso);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logomark .icon {
+      width: 32px;
+      height: 32px;
     }
     .logotext {
       display: flex;
@@ -1586,7 +1593,9 @@
   <header class="siteheader">
     <div class="container headerrow">
       <a href="#top" class="logo">
-        <img class="logomark" src="icon.jpeg" alt="Spice 'n' Barrels icon" onerror="this.style.display='none'">
+        <span class="logomark">
+          <svg class="icon"><use href="#ibarrel"/></svg>
+        </span>
         <span class="logotext">
           <span class="name">Spice 'n' Barrels</span>
           <span class="tag">Pure spices, rich flavours</span>
@@ -1623,7 +1632,9 @@
   <nav class="mobilenav" id="mobileNav" aria-label="Mobile">
     <div class="mobilenavtop">
       <a href="#top" class="logo">
-        <img class="logomark" src="icon.jpeg" alt="Spice 'n' Barrels icon" onerror="this.style.display='none'">
+        <span class="logomark">
+          <svg class="icon"><use href="#ibarrel"/></svg>
+        </span>
         <span class="logotext"><span class="name">Spice 'n' Barrels</span></span>
       </a>
       <button class="iconbtn closebtn" id="mobileClose" aria-label="Close menu"><svg class="icon"><use href="#iclose"/></svg></button>
@@ -1778,7 +1789,9 @@
     <div class="container footertop">
       <div class="footerbrand">
         <a href="#top" class="logo">
-          <img class="logomark" src="icon.jpeg" alt="Spice 'n' Barrels icon" onerror="this.style.display='none'">
+          <span class="logomark">
+            <svg class="icon"><use href="#ibarrel"/></svg>
+          </span>
           <span class="logotext"><span class="name">Spice 'n' Barrels</span><span class="tag">Pure spices, rich flavours</span></span>
         </a>
         <p>Small-batch spice blends, hand-blended and packed with care.</p>
